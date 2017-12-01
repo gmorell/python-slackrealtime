@@ -46,11 +46,11 @@ class DyingWebSocketClientFactory(WebSocketClientFactory):
 
 	"""
 	def clientConnectionLost(self, connector, reason):
-		print 'Connection lost:', reason
+		print('Connection lost:', reason)
 		reactor.stop()
 
 
 	def clientConnectionFailed(self, connector, reason):
-		print 'Connection failed:', reason
+		print('Connection failed:', reason)
 		reactor.stop()
 
