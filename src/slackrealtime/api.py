@@ -46,7 +46,7 @@ class SlackMethod(object):
 	def __call__(self, **kwargs):
 		# Prune any None parameters -- these should be defaults
 		params = {}
-		for k, v in kwargs.iteritems():
+		for k, v in kwargs.items():
 			if v is not None:
 				if isinstance(v, list) or isinstance(v, dict):
 					# Complex datatypes, JSON encode it
