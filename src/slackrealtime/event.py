@@ -40,7 +40,7 @@ class BaseEvent(object):
 		if attr in self._b:
 			return self._b[attr]
 		else:
-			raise AttributeError, attr
+			raise AttributeError(attr)
 
 	def copy(self):
 		return decode_event(self._b)
