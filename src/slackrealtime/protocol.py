@@ -37,7 +37,7 @@ class RtmProtocol(WebSocketClientProtocol):
 
 	def onMessage(self, msg, binary):
 		# What to do on getting messages.
-		msg = decode_event(json.loads(msg))
+		msg = decode_event(json.loads(msg.decode('utf-8')))
 
 		# Attempt to update metadata
 		try:
