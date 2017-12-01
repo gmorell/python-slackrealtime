@@ -36,7 +36,6 @@ class BaseEvent(object):
 			self.raw_ts = None
 
 	def __getattr__(self, attr):
-		attr = unicode(attr)
 		if attr in self._b:
 			return self._b[attr]
 		else:
