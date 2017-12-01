@@ -72,7 +72,7 @@ class SessionMetadata(object):
 			if key in resource and resource[key].upper() == value:
 				return k, resource
 
-		raise KeyError, original
+		raise KeyError(original)
 
 	def find_channel_by_name(self, name):
 		"""
