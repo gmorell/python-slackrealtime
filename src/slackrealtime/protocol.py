@@ -68,7 +68,7 @@ class RtmProtocol(WebSocketClientProtocol):
 		if self.next_message_id >= maxint:
 			self.next_message_id = 1
 
-		self.sendMessage(json.dumps(msg))
+		self.sendMessage(json.dumps(msg).encode('utf-8'))
 		return msg['id']
 
 
