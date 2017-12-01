@@ -20,7 +20,7 @@ from __future__ import absolute_import
 from datetime import datetime
 from pytz import utc
 import requests, json
-from urlparse import urljoin
+from urllib.parse import urljoin
 
 SLACK_API_URL = 'https://slack.com/api/'
 
