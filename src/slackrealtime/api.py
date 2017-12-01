@@ -69,7 +69,7 @@ class SlackMethod(object):
 
 		assert response['ok'] in (True, False), 'ok must be True or False'
 		if not response['ok']:
-			raise SlackError, response['error']
+			raise SlackError(response['error'])
 
 		# Trim this attribute as it is no longer required
 		del response['ok']
