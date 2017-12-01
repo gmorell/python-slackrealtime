@@ -108,7 +108,7 @@ class RtmProtocol(WebSocketClientProtocol):
 			# Message sent to a channel
 			id = self.meta.find_channel_by_name(channel)[0]
 		else:
-			raise Exception, 'Should not reach here.'
+			raise Exception('Should not reach here.')
 
 		if send_with_api:
 			return self.meta.api.chat.postMessage(
