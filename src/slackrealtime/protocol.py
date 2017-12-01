@@ -17,7 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 from __future__ import absolute_import
 from autobahn.twisted.websocket import WebSocketClientProtocol
-from sys import maxint
+from sys import maxsize
 from twisted.python import log
 from .event import decode_event
 
